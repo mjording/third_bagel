@@ -1,0 +1,32 @@
+<%= form_for(@bagel) do |f| %>
+  <% if @bagel.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@bagel.errors.count, "error") %> prohibited this bagel from being saved:</h2>
+    <ul>
+    <% @bagel.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :dough %><br />
+    <%= f.text_field :dough %>
+  </div>
+  <div class="field">
+    <%= f.label :toasted %><br />
+    <%= f.check_box :toasted %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

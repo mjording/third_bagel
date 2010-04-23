@@ -1,0 +1,29 @@
+<h1>Listing bagels</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Dough</th>
+    <th>Toasted</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bagels.each do |bagel| %>
+  <tr>
+    <td><%= bagel.name %></td>
+    <td><%= bagel.dough %></td>
+    <td><%= bagel.toasted %></td>
+    <td><%= bagel.price %></td>
+    <td><%= link_to 'Show', bagel %></td>
+    <td><%= link_to 'Edit', edit_bagel_path(bagel) %></td>
+    <td><%= link_to 'Destroy', bagel, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Bagel', new_bagel_path %>

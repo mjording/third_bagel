@@ -1,0 +1,25 @@
+<p class="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @bagel.name %>
+</p>
+
+<p>
+  <b>Dough:</b>
+  <%= @bagel.dough %>
+</p>
+
+<p>
+  <b>Toasted:</b>
+  <%= @bagel.toasted %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @bagel.price %>
+</p>
+
+
+<%= link_to 'Edit', edit_bagel_path(@bagel) %> |
+<%= link_to 'Back', bagels_path %>
